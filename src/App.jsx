@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Read from './components/Read';
+import Create from './components/Create';
 
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -20,16 +22,16 @@ function App() {
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Header">Header</Nav.Link>
-            <Nav.Link href="/Footer">Footer</Nav.Link>
+            <Nav.Link href="/Read">Read</Nav.Link>
+            <Nav.Link href="/Create">Create</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
       <Routes>
         <Route path='/' element={<Content></Content>}> </Route>
-        <Route path='/Header' element={<Header></Header>}> </Route>
-        <Route path='/Footer' element={<Footer></Footer>}> </Route>
+        <Route path='/Read' element={<Read></Read>}> </Route>
+        <Route path='/Create' element={<Create></Create>}> </Route>
       </Routes>
 
       
